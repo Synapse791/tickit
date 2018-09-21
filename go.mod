@@ -1,4 +1,4 @@
-module github.com/Synapse791/tickit
+module github.com/itmecho/tickit
 
 require (
 	github.com/spf13/cobra v0.0.3

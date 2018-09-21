@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/Synapse791/tickit/cmd"
+	"github.com/itmecho/tickit/cmd"
 )
 
 func main() {
