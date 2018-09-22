@@ -25,6 +25,7 @@ var addCmd = &cobra.Command{
 		tags := viper.GetStringSlice("add-tags")
 
 		newTask := &types.Task{
+			ID:          len(taskList) + 1,
 			Description: description,
 			Complete:    false,
 			Tags:        tags,

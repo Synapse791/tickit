@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"strings"
+	"os"
 
 	"github.com/spf13/cobra"
 )
@@ -19,13 +19,7 @@ var listCmd = &cobra.Command{
 			return nil
 		}
 
-		for _, task := range taskList {
-			status := " "
-			if task.Complete {
-				status = "x"
-			}
-			cli.Printf("[%s] - %s [%s]\n", status, task.Description, strings.Join(task.Tags, ","))
-		}
+		taskList.PrintTo(os.Stdout)
 
 		return nil
 	},
